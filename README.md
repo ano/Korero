@@ -23,11 +23,15 @@ To install the application of your LAMP based web server you'll need to
 ## Edit configuration file
 Edit the file manage/ewcfg10.php configuration file's details to connect to the database. For example if your database credentials are:
 
-*server:* localhost
-*port:* 3306
-*user:* maoridb_user
-*password:* maoridb_rocks
-*database:* maoridb
+> server: localhost
+
+> port: 3306
+
+> user: maoridb_user
+
+> password: maoridb_rocks
+
+> database: maoridb
 
 then you would edit the 
 ```php
