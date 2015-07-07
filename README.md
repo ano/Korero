@@ -48,9 +48,9 @@ define("EW_CONN_DB", 'maoridb', TRUE);
 This project would not have been successfull without the contribution and support of the following individuals and Organisations
 Sylvia Cadena - Community Partnerships Specialist: ISIF.ASIA (http://isif.asia/)
 Rod Dixon - Director: USP, Cook Islands Campus
-Jules Maher - CEO: Telecom Cook Islands
+Jules Maher - Former CEO: Telecom Cook Islands
 
 ## Project Team
-Maureen Hilyard - Ex-PICISOC Chairman
+Maureen Hilyard - Former PICISOC Chairman
 Nga Teinangaro - Teaching and Learning Resource Co-ordinator
 Violet Tisam - Community Engagement
