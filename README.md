@@ -33,7 +33,7 @@ Edit the file manage/ewcfg10.php configuration file's details to connect to the 
 
 > database: maoridb
 
-then you would edit the 
+then you would edit the manage/ewcfg10.php as follows, starting from line 45
 ```php
 // Database connection info
 define("EW_CONN_HOST", 'localhost', TRUE);
