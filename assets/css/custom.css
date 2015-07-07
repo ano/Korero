@@ -1,0 +1,60 @@
+	/*
+		Author: Ano Tisam
+		Email: an0tis@gmail.com
+		Website: http://www.whupi.com
+		Description: CUSTOM Styles for HTML5Up
+		LICENSE: Free for personal and commercial use licensed under the Creative Commons Attribution 3.0 License, which means you can:
+
+					Use them for personal stuff
+					Use them for commercial stuff
+					Change them however you like
+
+				... all for free, yo. In exchange, just give the AUthor credit for the program and tell your friends about it :)
+	*/
+@media (min-width:737px){
+
+	#search, #two {
+		padding: 2em;
+		width: 80%;
+		margin: auto;
+	}
+
+	#two {
+		position: absolute;
+		z-index: 9999;
+		left: 12.6%;
+		top: 54%;
+		opacity: 0.9;
+		transition: opacity 0.25s ease-in-out 0s;
+		width: 75%;
+		
+	}
+
+	#search input {
+		background-color: #21B2A6;
+		border: 3px solid #09EFFF;
+	}
+
+}
+@media (max-width:736px){
+	#search, #two {
+		padding: 1em;
+		margin: auto;
+	}
+	#two {
+		position: absolute;
+		z-index: 9999;
+		left: 12.6%;
+		top: 24.8%;
+		opacity: 0.9;
+		transition: opacity 0.25s ease-in-out 0s;
+		width: 74%;
+		
+	}
+}
+
+
+.hidden{
+	display: none !important;
+}
+

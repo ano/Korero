@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<configuration date="2015/05/28" author="e.World Technology Ltd.">
+<project id="{FF0DFD12-B2E5-4AC7-8EC9-50E29151819F}" file="C:\Users\Ano\Dropbox\Whupi LTD\Maori\code\maoridb.pmp" name="maoridb" product="PHPMaker" version="10.0" datetime="2015/05/28 20:10:50" languagefolder="phplang" userlevel="">
+<table id="dialects" name="dialects" caption="dialects" userlevel="" priv="1"/>
+<table id="_language" name="language" caption="language" userlevel="" priv="1"/>
+<table id="words" name="words" caption="words" userlevel="" priv="1"/>
+<table id="words_archive" name="words_archive" caption="words archive" userlevel="" priv="1"/>
+</project></configuration>

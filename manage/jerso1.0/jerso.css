@@ -1,0 +1,590 @@
+/* 
+==========================================================================
+
+  Jerso 1.0.1 - 12 Jan 2014
+  by Simon Marussi
+  http://codecanyon.net/item/jerso/6507331
+
+==========================================================================
+*/
+
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+html{ background-color: #25313E;}
+body{ font-family: 'Open Sans',sans-serif, Arial; font-size: 13px;color:#333;}
+table{ background-color: transparent;}
+
+/* 
+--------------------------------------------------------------------------   
+  GENERIC PARTS
+--------------------------------------------------------------------------
+*/
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+font-size: 13px; border-radius: 2px; vertical-align: inherit; border-color: #aaa;font-family: 'Open Sans',sans-serif, Arial;
+}
+/* fix ie from old css */
+.dropdown-menu > li > a:hover,
+.dropdown-submenu,
+.dropdown-submenu a,
+.dropdown-submenu:hover,
+.dropdown-submenu a:hover,
+.ewTable .ewTableHeader,
+.ewTable .ewTableHeader td{filter:none;}
+
+.displaynone{ display: none;}
+
+/* 
+--------------------------------------------------------------------------   
+  HEADER
+--------------------------------------------------------------------------
+*/
+#ewHeaderRow{ background-color: #25313E; height: 50px;}
+#ewHeaderRow>img{ display: none;}
+#ewHeaderRow:before{content:''; display: block; position: absolute; top: 0; left: 0; height: 50px; width: 220px;
+background-color: #1a252e;}
+
+/* 
+--------------------------------------------------------------------------   
+  SIDEBAR
+--------------------------------------------------------------------------
+*/
+.ewMenuColumn {background-color: #384a5e;}
+#RootMenu li{ font-size: 13px;font-family: 'Open Sans',sans-serif, Arial; text-transform: none;}
+
+.dropdown-menu{ margin: 0; padding:0; width: 220px!important;}
+.dropdown-menu > li > a {color:#ADBECE; padding:16px 20px 16px 20px; white-space: inherit;}
+
+.dropdown-menu > li{ border-bottom: 1px solid rgba(255,255,255,0.05);}
+.dropdown-menu > li.disabled > a{color: #fff; padding:16px 20px 16px 10px; border-left: 10px solid #FB6B5B; }
+.dropdown-menu > li.disabled{ position: relative; }
+
+.dropdown-menu > li > a:hover {color:#ffffff;background: none; background-image: none;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition:         all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.dropdown-menu > li:hover{ background-color: #354659;
+  -webkit-transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition:         all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+.dropdown-menu > li.disabled:hover a{ color: #fff;}
+.dropdown-menu .divider{ border-color: rgba(255,255,255,0.05); border-width: 5px; background-color: transparent; margin: 0; height: 0;}
+
+.dropdown-header, .nav-header{ background-color: #FB6B5B; font-size: 13px; font-weight: bold; padding: 7px 20px;
+    color: #fff; margin-bottom: 1px!important; text-shadow:none;}
+.dropdown-header:hover, .nav-header:hover{background-color: #FB6B5B!important;}
+
+li.dropdown-submenu:hover a {background-color: #384a5e; background-image: none;}
+.dropdown-submenu > .dropdown-menu{ margin-top: 0; margin-left: 0; border:none; background-color: #384a5e!important; border-radius: 0;}
+.dropdown-submenu > .dropdown-menu > li > a {color:#ADBECE; background-color: transparent;}
+.dropdown-submenu > .dropdown-menu> li:hover{ background-color: #354659;}
+.dropdown-submenu > .dropdown-menu> li:hover a{ color: #fff;}
+.dropdown-submenu > .dropdown-menu > li.disabled > a:after{ content:'';}
+
+.dropdown-submenu > a:after{ border: none; content: "\f105";display: block;color: #ADBECE;
+    font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 13px;position: absolute;right: 30px;top: 12px;}
+
+
+/* 
+--------------------------------------------------------------------------   
+  PROJECT NAME
+--------------------------------------------------------------------------
+*/
+.ewSiteTitle {color: #D3D7DE;font-size: 13px;font-weight: normal;position: absolute;left: 236px;top: 0px;background-color: #25313E;
+height: 50px;overflow: hidden;line-height: 50px;padding-left: 10px;}
+#ewContentColumn{ padding:0 0 36px 0; background-color: #F9F9F9;}
+.ewContentColumn .tbl_breadcrumb{ 
+    margin-bottom: 16px; 
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #E0E4E8;
+    padding-bottom: 10px;
+    z-index: 9;
+}
+.breadcrumb {
+    list-style: none outside none;
+    padding: 10px 16px 0;
+}
+
+.breadcrumb{
+    color: #222!important;
+    display: block;
+    font-size: 28px;
+    padding: 30px 16px 10px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+.breadcrumb>.active{ color: #222!important;}
+.breadcrumb a{ color: #222!important; font-weight: 300;}
+.breadcrumb li{ padding-right: 10px; line-height: 28px;}
+.breadcrumb li:first-child, .breadcrumb li .divider{ display: none;}
+.breadcrumb li:last-child{ font-weight: 400;}
+.breadcrumb li:nth-child(2){ font-weight: 300;}
+.breadcrumb li:before{margin: 0 10px 0 5px;content: "\f105"; font-size: 13px; vertical-align: middle;
+  font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+.breadcrumb li:nth-child(2):before{content: ''; margin: 0;}
+
+
+.ewListExportOptions, .ewViewExportOptions{
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #E0E4E8;
+    margin: -17px 0 16px;
+    padding: 4px 16px 10px 48px;
+    z-index: 10;
+    position: relative;
+}
+.ewListExportOptions:before, .ewViewExportOptions:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 20px;content: "\f08e";
+color: #999;margin-right: 10px;vertical-align: top;padding-top: 6px;display: inline-block; margin-left: -30px; position: absolute;}
+
+.ewViewOtherOptions{  padding: 10px 16px 10px; margin-bottom: 0;}
+
+/* 
+--------------------------------------------------------------------------   
+  CONTENT COLUMN
+--------------------------------------------------------------------------
+*/
+#ewContentColumn>.ewLink{ margin-left: 16px;}
+
+/* 
+--------------------------------------------------------------------------   
+  FOOTER
+--------------------------------------------------------------------------
+*/
+#ewFooterRow{ background-color: #1A252E; color: #77858E;}
+
+
+
+/* 
+--------------------------------------------------------------------------   
+  EXPORT MENU
+--------------------------------------------------------------------------
+*/
+.ewListOptionSeparator{ padding-right: 5px;}
+.ewExportOption img{ display: none;}
+.ewExportOption a.ewExportLink{ 
+    background-color: #ddd;
+    border-radius: 2px;
+    color: #555;
+    font-size: 11px;
+    padding: 2px 12px;
+    margin-bottom: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: inline-block;
+    height: 16px;
+    border:1px solid #ccc;
+    -webkit-transition: background-color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition:         background-color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ewExportOption a.ewExportLink:hover{ background-color: #ccc;
+    -webkit-transition: background-color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition:         background-color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.ewExportOption a.ewExportLink:before{content: attr(data-caption);}
+
+.ewExportOption .ewMenu a{ background-color: transparent; display: block; border-radius: 0;}
+.ewExportOption .ewMenu a:hover{ background-color: transparent; color: #222; padding: 2px 12px;}
+.ewExportOption .ewMenu li:hover{ background-color: #eee;}
+.ewListOptionSeparator .ewButtonGroup .caret{ border: none!important; width: 7px; margin: 0 0 0 6px;}
+.ewListOptionSeparator .ewButtonGroup .caret:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; font-size: 13px; content: "\f107"; }
+.ewListOptionSeparator .ewButtonGroup.open .caret:before{content: "\f106"; }
+.btn-group.open .btn.dropdown-toggle {background-color: #999999; box-shadow: none; color: #fff;}
+.ewExportOption .dropdown-menu{ border-radius: 0;}
+.ewListOptionSeparator .ewButtonGroup.open{ border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+
+
+
+/* 
+--------------------------------------------------------------------------   
+  SEARCH BAR
+--------------------------------------------------------------------------
+*/
+.ewSearchTable{ background-color: #fff; border-top: 1px solid #E0E4E8; border-bottom: 1px solid #E0E4E8; width: 100%; margin-top: -17px;}
+.ewSearchTable .ewRow{ margin-bottom: 5px;}
+.ewSearchTable .accordion{ margin-bottom: 0;}
+.ewSearchTable .accordion-group {border:none; background-color: #fff;}
+.ewSearchTable .accordion-group .accordion-heading {}
+.ewSearchTable .accordion-group .accordion-heading a{ color: #222; font-weight: bold;}
+.ewSearchTable .accordion-group .accordion-body{ border:none; border-top: none;}
+label, input, button, select, textarea {font-size: 13px;line-height: 18px;}
+.ewSearchTable .accordion-group .accordion-toggle a{ text-decoration: none;}
+.ewSearchTable .accordion-group .accordion-toggle:after{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; font-size: 11px; content: "\f106"; margin-left: 5px;}
+.ewSearchTable .accordion-group .accordion-toggle.collapsed:after{ content: "\f107";}
+.ewSearchTable .accordion-group .accordion-toggle:after:hover{ text-decoration: none;}
+.input-append input, .input-append select, .input-append .uneditable-input {border-radius: 2px 0 0 2px;}
+
+.ewExportOption.ewListOptionSeparator .ewButtonGroup .dropdown-menu a{ border: none;}
+.ewExportOption.ewListOptionSeparator .ewButtonGroup .dropdown-menu a:before{content: '';}
+
+/* 
+--------------------------------------------------------------------------   
+  GENERIC BUTTONS
+--------------------------------------------------------------------------
+*/
+.btn{ background-image: none; border-color:#3FB4B5; font-family: 'Open Sans',sans-serif, Arial; font-size: 13px!important; 
+    background-color: #4CC0C1;text-shadow: none; color: #fff!important; box-shadow: none; line-height: 24px; border-radius: 2px;}
+.btn:hover{ background-color: #3FB4B5; color: #fff;}
+.btn-primary {background-image: none;}
+.btn.disabled, .btn[disabled], .btn.disabled:hover, .btn[disabled]:hover { border-color: #E6E6E6; background-color: #E6E6E6; color: #333;}
+.input-append input, .input-prepend input, .input-append select, .input-prepend select, .input-append .uneditable-input, .input-prepend .uneditable-input, .input-append .dropdown-menu, .input-prepend .dropdown-menu, .input-append .popover, .input-prepend .popover {
+    font-size: 13px;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    height: 24px;}
+select{ height: 34px; padding-top: 6px;}
+.table-bordered select, .table-striped select{ height: auto;}
+.input-append .add-on:last-child, .input-append .btn:last-child, .input-append .btn-group:last-child > .dropdown-toggle {border-radius: 0 2px 2px 0;}
+.input-prepend.input-append .add-on:last-child, .input-prepend.input-append .btn:last-child {border-radius: 0 2px 2px 0;}
+.btn-group > .btn:last-child, .btn-group > .dropdown-toggle {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.btn-group > .btn:first-child {
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-left: 0;
+}
+.btn-group > .btn + .dropdown-toggle { box-shadow: none;}
+.input-prepend.input-append .add-on:first-child, .input-prepend.input-append .btn:first-child {border-radius: 2px 0 0 2px;}
+.input-append .add-on, .input-append .btn, .input-append .btn-group {margin-left: 0;}
+.input-prepend .add-on, .input-prepend .btn {margin-right: 0;}
+
+
+/* 
+--------------------------------------------------------------------------   
+  DIALOG, ALERT AND MODAL
+--------------------------------------------------------------------------
+*/
+.ewMessageDialog, .alert{ z-index: 100000;}
+.alert{ position: absolute; right: 20px; top: 20px; background-color: #ff0000; 
+    width: 300px;color: #fff; text-shadow:none; border:none; border-radius: 0; overflow: hidden;}
+.alert .close{color: #FFFFFF; opacity: 0.4;}
+.alert:hover .close {opacity: 1;}
+
+.alert-error, .alert-danger{ background-color: #FA5542;}
+.alert-success{background-color:#65BD77;}
+.alert-info{background-color:#FFC333;}
+.alert-block{background-color:#FFC333;}
+
+.modal{ border-radius: 2px;}
+.modal-footer{ box-shadow: none;}
+
+
+/* 
+--------------------------------------------------------------------------   
+  LIST TABLE
+--------------------------------------------------------------------------
+*/
+.ewGrid{ margin-left: 16px; margin-right: 16px;}
+.ewGrid .ewGridContent{ border: none;}
+.ewGridMiddlePanel {background-color: #F9F9F9; padding-bottom: 16px;}
+.ewGridUpperPanel,.ewGridLowerPanel{ background-color: #F9F9F9; border:none; margin-top: 0; padding-bottom: 5px}
+.ewGridLowerPanel{ padding-top: 18px;}
+.ewListOtherOptions{ margin-top: 10px; margin-bottom: 10px; }
+
+.btn.ewAddEdit.ewAdd{ background-color: #65BD77; border-color: #53B567;}
+.btn.ewAddEdit.ewAdd:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f067"; margin-right: 5px; line-height: 22px;}
+.btn.ewAddEdit.ewAdd:hover{background-color: #53B567;}
+
+.btn.ewAddEdit.ewInlineAdd{ background-color: #F6D616; border-color: #f4c414;}
+.btn.ewAddEdit.ewInlineAdd:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f067"; margin-right: 5px; line-height: 22px; }
+.btn.ewAddEdit.ewInlineAdd:hover{background-color: #f4c414;}
+
+.btn.ewAddEdit.ewGridAdd{ background-color: #65BD77; border-color: #53B567;}
+.btn.ewAddEdit.ewGridAdd:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f067"; margin-right: 5px; line-height: 22px; }
+.btn.ewAddEdit.ewGridAdd:hover{background-color: #53B567;}
+
+.btn.ewAddEdit.ewGridEdit{ background-color: #65BD77; border-color: #53B567;}
+.btn.ewAddEdit.ewGridEdit:hover{background-color: #53B567;}
+
+.btn.ewAddEdit.ewAddBlankRow img{ display: none;}
+.btn.ewAddEdit.ewAddBlankRow { background-color: #65BD77; border-color: #53B567;}
+.btn.ewAddEdit.ewAddBlankRow:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;  content: "\f044"; margin-right: 5px; line-height: 22px;}
+.btn.ewAddEdit.ewAddBlankRow:hover{background-color: #53B567;}
+
+.ewGridMiddlePanel .ewTable{ border:1px solid #dddddd; border-collapse: collapse;}
+
+.ewTable{ width: auto;}
+.ewTable.ewTableSeparate{ background-color: #fff;}
+.ewTable .ewTableHeader td.ewListOptionHeader{ border-right: none;}
+.ewTable .ewTableHeader td:not(.ewListOptionHeader){ border-left: 1px solid #ddd;}
+
+/*.ewTable tbody .ewTableAltRow{ background-color: #fff;}*/
+.ewTable .ewTableHighlightRow > td{ background-color: #eee;}
+.ewTable tbody .ewListOptionBody{ border-right: none; width: 21px;}
+.ewTable tbody td:not(.ewListOptionBody){ border-left: 1px solid #ddd;}
+.ewTable .ewTableHeader, .ewTable .ewTableHeader td {
+    background-color: transparent;
+    background-image: none;
+    padding: 10px 6px;
+    border-color: #ddd;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    color:#333;
+}
+.ewTable > tbody > tr > td, .ewTable > tfoot > tr > td {padding: 8px;}
+.ewSeparator{ display: none;}
+.ewTable tbody .ewListOptionBody{ padding: 3px 0;}
+
+.ewTable tbody .ewListOptionBody:first-child{ padding-left: 5px;}
+.ewTable tbody .ewListOptionBody:last-child{ padding-right: 5px;}
+
+
+.ewTable tbody .ewListOptionBody .ewRowLink img{ display: none;}
+.ewTable tbody .ewListOptionBody .ewRowLink { text-decoration: none!important; color: #222;}
+.ewTable tbody .ewListOptionBody .ewRowLink:before{
+    /*background-color: #65BD77;*/
+    border-radius: 16px;
+    color: #ccc;
+    display: inline-block;
+    font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+    padding: 3px;
+    text-align: center;
+    width: 16px;
+    margin-right: 2px;
+    font-weight: normal!important;
+    line-height: 16px;
+}
+a.btn.ewRowLink.ewDetailList{ color: #fff!important;}
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink:before{background-color: #65BD77; color: #fff;font-size: 13px;}
+
+.ewTable tbody .ewListOptionBody .ewRowLink:hover:before{ background-color: #53B567;}
+
+.ewTable tbody .ewListOptionBody .ewRowLink.ewView:before{content: "\f002";}
+.ewTable tbody .ewListOptionBody .ewRowLink.ewEdit:before{content: "\f040";}
+.ewTable tbody .ewListOptionBody .ewRowLink.ewInlineEdit:before{content: "\f040"; text-decoration: underline;}
+.ewTable tbody .ewListOptionBody .ewRowLink.ewCopy:before{content: "\f0c5";}
+.ewTable tbody .ewListOptionBody .ewRowLink.ewInlineCopy:before{content: "\f0c5"; text-decoration: underline;}
+.ewTable tbody .ewListOptionBody .ewRowLink.ewDelete:before{content: "\f00d";}
+
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewInlineEdit:before,
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewInlineCopy:before{ background-color: #F6D616!important;}
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewInlineEdit:hover:before,
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewInlineCopy:hover:before{ background-color: #f4c414!important;}
+
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewDelete:before{ background-color: #E73C3C; }
+.ewTable tbody tr:hover .ewListOptionBody .ewRowLink.ewDelete:hover:before{ background-color: #df1b1b;}
+
+
+.ewListOptionBody > span > a.ewRowLink:not(.btn) {
+  position: relative;
+  text-decoration: none;
+}
+
+.ewListOptionBody > span > a.ewRowLink:not(.btn):after{
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  position: absolute; 
+  padding: 6px 10px 16px;
+  content: attr(data-caption);
+  text-align: center;
+  height: auto;
+  white-space: nowrap;
+  top: -38px;
+  color: #fff;
+  font-size: 13px;
+  left: -6px;
+  background-image: url("bg-tooltip.png");
+  background-repeat: no-repeat;
+  background-position: -165px bottom;
+}
+.ewListOptionBody > span > a.ewRowLink:not(.btn):hover:after {
+  visibility: visible;
+  opacity: 1;
+  top: -42px;
+    -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 500ms;
+    transition:         all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 500ms; 
+}
+
+/*devo eliminare il tooltip del permission a mano */
+.ewListOptionBody > span > a.ewRowLink.ewUserPermission{ padding-right: 5px; padding-left: 3px}
+.ewListOptionBody > span > a.ewRowLink.ewUserPermission:hover:after{ visibility: hidden;}
+
+.ewListOptionBody .btn-group .caret{ border: none!important; width: 7px; margin: 0;}
+.ewListOptionBody .btn-group .caret:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; font-size: 13px; content: "\f107"; }
+.ewListOptionBody .btn-group.open .caret:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; font-size: 13px; content: "\f106"; }
+.ewListOtherOptions .dropdown-menu,
+.ewListOptionBody .dropdown-menu{ border-radius: 0; margin-left: -1px;}
+.ewListOtherOptions .dropdown-menu a,
+.ewListOptionBody .dropdown-menu a{ color: #222; background-color: transparent; display: block; border-radius: 0;padding: 4px 12px; font-size: 13px;}
+.ewListOtherOptions .dropdown-menu a:hover,
+.ewListOptionBody .dropdown-menu a:hover{ background-color: transparent; color: #222; padding: 4px 12px;}
+.ewListOtherOptions .dropdown-menu li:hover,
+.ewListOptionBody .dropdown-menu li:hover{ background-color: #eee;}
+
+.ewTable tbody .ewListOptionBody .btn-group{margin-left: 5px; margin-right: 5px; }
+
+.ewTableSelectRow, .ewTableSelectRow td{ background-color: #bbb!important;}
+
+
+/* 
+--------------------------------------------------------------------------   
+  TABLE INSIDE TABLE
+--------------------------------------------------------------------------
+*/
+.ewTablePreviewRow { background-color: #eee!important;}
+.ewTablePreviewRow .ewGridContent{ border-left: none!important;}
+.ewTablePreviewRow .tab-content{ margin-top: -16px;}
+.ewTablePreviewRow .tab-content .ewGrid { margin-left: 0; margin-right: 0;}
+
+/* 
+--------------------------------------------------------------------------   
+  VIEW TABLE
+--------------------------------------------------------------------------
+*/
+.ewGrid{ background-color: #fff; margin-top: 16px;}
+.ewGrid > tbody > tr > td > .table > tbody > tr > td:first-of-type, .ewMultiColumnTable > tbody > tr > td > .table > tbody > tr > td:first-of-type {
+    font-weight: bold;
+}
+/* 
+--------------------------------------------------------------------------   
+  GRID EDIT
+--------------------------------------------------------------------------
+*/
+.btn.ewGridLink.ewInlineUpdate img{ display: none;}
+.btn.ewGridLink.ewInlineUpdate:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00c"; margin-right: 5px; line-height: 22px;}
+
+.btn.ewGridLink.ewInlineInsert img{ display: none;}
+.btn.ewGridLink.ewInlineInsert:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00c"; margin-right: 5px; line-height: 22px;}
+
+.btn.ewGridLink.ewInlineCancel img{ display: none;}
+.btn.ewGridLink.ewInlineCancel:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00d"; margin-right: 5px; line-height: 22px; color: #ff0000;}
+
+.btn.ewGridLink.ewGridDelete img{ display: none;}
+.btn.ewGridLink.ewGridDelete:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00d"; margin-right: 5px; line-height: 22px; color: #ff0000;}
+
+
+/* 
+--------------------------------------------------------------------------   
+  EDIT TABLE
+--------------------------------------------------------------------------
+*/
+button#btnAction{ margin-left: 16px;}
+
+/* 
+--------------------------------------------------------------------------   
+  VIEW TABLE TAB
+--------------------------------------------------------------------------
+*/
+.ewStdTable{ width: 100%;}
+.tab-pane .ewGrid{ width: auto!important;}
+.ewStdTable .tabbable{ margin: 0 16px;}
+.ewStdTable .tabbable .nav{ margin-bottom: 0;}
+.tab-content{ border: 1px solid #DDDDDD; border-top: none; background-color: #fff; margin-bottom: 10px;}
+
+.btn.ewAction.ewAdd{ background-color: #65BD77; border-color: #53B567;}
+.btn.ewAction.ewAdd:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f067"; margin-right: 5px; line-height: 22px;}
+.btn.ewAction.ewAdd:hover{background-color: #53B567;}
+
+.btn.ewAction.ewGridSave img{ display: none;}
+.btn.ewAction.ewGridSave:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00c"; margin-right: 5px; line-height: 22px;}
+
+.btn.ewAction.ewGridInsert img{ display: none;}
+.btn.ewAction.ewGridInsert:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00c"; margin-right: 5px; line-height: 22px;}
+
+.btn.ewAction.ewGridCancel img{ display: none;}
+.btn.ewAction.ewGridCancel:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; content: "\f00d"; color: #ff0000; margin-right: 5px; line-height: 22px;}
+
+/* 
+--------------------------------------------------------------------------   
+  REPORT
+--------------------------------------------------------------------------
+*/
+.ewReportTable{ margin-left: 16px;}
+
+/* 
+--------------------------------------------------------------------------   
+  PAGER
+--------------------------------------------------------------------------
+*/
+.ewPager{ margin-left: 16px;}
+.ewGrid .ewPager{ margin-left: 0;}
+.ewPager .ewStdTable i{background-image: none; }
+.ewPager .ewStdTable i:before{font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 15px; font-style: normal;}
+.ewPager .ewStdTable i.icon-step-backward:before{ content: "\f100";}
+.ewPager .ewStdTable i.icon-prev:before{ content: "\f105";}
+.ewPager .ewStdTable i.icon-play:before{ content: "\f105";}
+.ewPager .ewStdTable i.icon-step-forward:before{ content: "\f101"}
+
+.ewPager .ewStdTable td{ vertical-align: top; }
+.ewPager .ewStdTable .input-mini{ text-align: center;}
+.ewPager .ewStdTable .input-prepend{ vertical-align: top; margin-top: -7px;}
+.ewPager select{ height: auto; margin-top: -7px;}
+
+/* 
+--------------------------------------------------------------------------   
+  MENU BUTTON
+--------------------------------------------------------------------------
+*/
+.button-mobile:before{color: #D3D7DE;content: "\f0c9";display: block;font-family: 'FontAwesome';-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 20px;height: 50px;
+    line-height: 51px;position: absolute;top: 0;left: 0;text-align: center;width: 50px;z-index: 10000;}
+
+.ewMenuColumn.stato1,
+.ewMenuColumn.stato1 #RootMenu.dropdown-menu,
+.ewMenuColumn.stato1 .ewMenu,
+.ewMenuColumn.stato2,
+.ewMenuColumn.stato2 #RootMenu.dropdown-menu,
+.ewMenuColumn.stato2 .ewMenu{
+    -webkit-transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition:all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ewMenuColumn.statoForzato,
+.ewMenuColumn.statoForzato #RootMenu.dropdown-menu,
+.ewMenuColumn.statoForzato .ewMenu{
+    -webkit-transition: none!important;
+    transition: none!important;
+}
+
+/* 
+--------------------------------------------------------------------------   
+  MEDIA QUERY
+--------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 480px) {
+  .ewSearchTable input[type="text"]{ width: 100px;}
+  .alert{ right: 5px; top: 5px;}
+  .ewSiteTitle {left: 50px;}
+
+  .form-horizontal .ewLoginContent .controls { margin-left: 16px!important;}
+  .form-horizontal .ewLoginContent .control-label{ text-align: left; margin-left: 16px!important;}
+
+  .btn-group+.btn-group {clear: both;display: block;margin-left: 0;margin-top: 5px;}
+}
+
+/* tablet vert */
+@media only screen and (max-width: 768px) {
+  .ewMenuColumn.stato1, 
+  .ewMenuColumn.stato1 #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato1 .ewMenu{width: 0px!important; overflow: hidden;}
+
+  .ewMenuColumn.stato2, 
+  .ewMenuColumn.stato2 #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato2 .ewMenu{width: 220px!important;}
+
+  .ewMenuColumn.stato1:hover, 
+  .ewMenuColumn.stato1:hover #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato1:hover .ewMenu{width: 220px!important; overflow: visible;}
+}
+
+/* il resto, talbet oriz, ipad */
+@media only screen and (min-width: 769px){
+  .ewMenuColumn.stato2, 
+  .ewMenuColumn.stato2 #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato2 .ewMenu{width: 10px!important; overflow: hidden;}
+
+  .ewMenuColumn.stato1, 
+  .ewMenuColumn.stato1 #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato1 .ewMenu{width: 220px!important;}
+
+  .ewMenuColumn.stato2:hover, 
+  .ewMenuColumn.stato2:hover #RootMenu.dropdown-menu,
+  .ewMenuColumn.stato2:hover .ewMenu{width: 220px!important; overflow: visible;}
+}
+
