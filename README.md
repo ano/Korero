@@ -10,7 +10,7 @@ To install the application of your LAMP based web server you'll need to
 * Create a database for the web application 
 * Edit the Configuration file
 
-# Detailed Installation
+# Detailed Installation Instructions
 ## Upload zip file to your server
 * Download the zipped version of the application here https://github.com/ano/Korero/archive/master.zip
 * Upload the code to your LAMP server
