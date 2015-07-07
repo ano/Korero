@@ -18,18 +18,27 @@ To install the application of your LAMP based web server you'll need to
 
 ## Create your MySQL Database
 * Create an empty database 
-* Copy, Paste and Execute the SQL code in the database folder, SQL code is located here https://github.com/ano/Korero/blob/master/database/maoridb.sql 
+* Copy, Paste and Execute the SQL code in the database folder, SQL code is located here database/maoridb.sql 
 
 ## Edit configuration file
-Find and Change the following configuration file's details to connect to the database
+Edit the file manage/ewcfg10.php configuration file's details to connect to the database. For example if your database credentials are:
 
-Set the details to your databases credentials, example if you
+*server:* localhost
+*port:* 3306
+*user:* maoridb_user
+*password:* maoridb_rocks
+*database:* maoridb
+
+then you would edit the 
+```php
 // Database connection info
 define("EW_CONN_HOST", 'localhost', TRUE);
 define("EW_CONN_PORT", 3306, TRUE);
 define("EW_CONN_USER", 'maoridb_user', TRUE);
 define("EW_CONN_PASS", 'maoridb_rocks', TRUE);
 define("EW_CONN_DB", 'maoridb', TRUE);
+```
+
 
 # Acknowlegements and Thanks
 This project would not have been successfull without the contribution and support of the following individuals and Organisations
