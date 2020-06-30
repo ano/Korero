@@ -1,5 +1,5 @@
 # Overview
-Koreroa (which means talk, speak, discuss in Cook Islands Maori) is the name of our Open Source Language Database Web application  developed by the Cook Islands Internet Action Group.
+Korero (which means talk, speak, discuss in Cook Islands Maori) is the name of our Open Source Language Database Web application  developed by the Cook Islands Internet Action Group.
 
 ## Application Platform
 The application is a LAMP Stack (Linux Apache PHP MySQL) based web application and is similiar to the one developed by the orginal project here http://www.maori.org.ck/
